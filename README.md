@@ -2,6 +2,13 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
+> **Use `TextView-2026-06-26-packagingfix.zip`.** The earlier `2026-06-25` /
+> `2026-06-25-v2` builds crash at launch on any machine other than the one they
+> were built on — a packaging defect where the app resolved its bundled
+> resources from the build machine's `.build` folder instead of from inside the
+> `.app`. This build is self-contained (verified via a `--verify-resources`
+> packaging gate) and runs on any Apple-Silicon Mac (macOS 15+).
+
 | Artifact | Build | Arch | Signing |
 |---|---|---|---|
 | `TextView-<date>.zip` | **release / prod** | `arm64` (Apple Silicon) | self-signed `MarkdownViewer Local Dev`, hardened runtime |
