@@ -2,12 +2,17 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-06-26-packagingfix.zip`.** The earlier `2026-06-25` /
-> `2026-06-25-v2` builds crash at launch on any machine other than the one they
-> were built on — a packaging defect where the app resolved its bundled
-> resources from the build machine's `.build` folder instead of from inside the
-> `.app`. This build is self-contained (verified via a `--verify-resources`
+> **Use `TextView-2026-07-31.zip`** (latest). Highlights since 2026-06-26: LaTeX math
+> (backend MathML — works in export, no JS), markdown footnotes / GitHub alerts /
+> definition lists, a WebView git-diff viewer, split edit+preview mode, tab & session
+> drag-reorder + drag-a-tab-onto-a-session-pill, recently-closed tabs (⇧⌘T), 3-way
+> disk-conflict merge that never silently discards a side, Local History size caps with
+> smart thinning, Mermaid 11.16.0 (security advisories cleared), bundled third-party
+> license notices, and crash/data-safety hardening. Self-contained (`--verify-resources`
 > packaging gate) and runs on any Apple-Silicon Mac (macOS 15+).
+>
+> The `2026-06-25` / `2026-06-25-v2` builds are known-broken off the build machine
+> (resource-path packaging defect, fixed in `2026-06-26-packagingfix`).
 
 | Artifact | Build | Arch | Signing |
 |---|---|---|---|
