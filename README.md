@@ -2,14 +2,20 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-07-31.zip`** (latest). Highlights since 2026-06-26: LaTeX math
-> (backend MathML — works in export, no JS), markdown footnotes / GitHub alerts /
-> definition lists, a WebView git-diff viewer, split edit+preview mode, tab & session
-> drag-reorder + drag-a-tab-onto-a-session-pill, recently-closed tabs (⇧⌘T), 3-way
-> disk-conflict merge that never silently discards a side, Local History size caps with
-> smart thinning, Mermaid 11.16.0 (security advisories cleared), bundled third-party
-> license notices, and crash/data-safety hardening. Self-contained (`--verify-resources`
-> packaging gate) and runs on any Apple-Silicon Mac (macOS 15+).
+> **Use `TextView-2026-08-05.zip`** (latest). Highlights since 2026-07-31: panel/column
+> resizing glued to the pointer (the half-speed flicker/lag class is fixed everywhere),
+> predictable pointer cursors, false "file changed on disk" conflicts eliminated, huge
+> commit diffs bounded (no more wedged git panel), wikilinks + working relative links,
+> named session save points, Git Status Diff|Source toggle with ephemeral opens + visible
+> diff line washes/edge bars, Local History per-hunk "Merge into Current" + Copy Version,
+> per-file detected indentation (guides/Tab match the file), purple find matches with a
+> scrollbar match ruler + zoom-scaled find bar, restyled tabs (active connects to the
+> document), crash-guard "Restore Now", doubled recents, hex hot-exit.
+>
+> Older: `TextView-2026-07-31.zip` — LaTeX math (backend MathML), footnotes/alerts/
+> definition lists, WebView git-diff viewer, split mode, tab/session drag, 3-way
+> disk-conflict merge, Mermaid 11.16.0, bundled license notices. Self-contained
+> (`--verify-resources` packaging gate); runs on any Apple-Silicon Mac (macOS 15+).
 >
 > The `2026-06-25` / `2026-06-25-v2` builds are known-broken off the build machine
 > (resource-path packaging defect, fixed in `2026-06-26-packagingfix`).
