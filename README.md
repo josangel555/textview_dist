@@ -2,7 +2,14 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-08-11-v2.zip`** (latest — same-day refresh). Highlights since
+> **Use `TextView-2026-08-11-v3.zip`** (latest — pane fixes over v2): the session
+> tab strip stays visible while split (it was being composited over), the file
+> navigator/footer/watcher follow every pane interaction, and right-clicking any
+> tab offers **Split Pane Right / Left** (tear the tab into a new pane; drag a
+> tab onto the other pane's strip to move it). Title band: flat tone, pills
+> clear of the traffic lights.
+>
+> Older: `TextView-2026-08-11-v2.zip` — the panes debut. Highlights since
 > the morning build: **editor panes** — split the window into panes (right or down),
 > each with its own tab strip, drag tabs between panes, click anywhere to focus a
 > pane, resize panes on a visible gutter, every pane carries its own
