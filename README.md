@@ -2,7 +2,18 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-08-11.zip`** (latest). Highlights since 2026-08-05: the left
+> **Use `TextView-2026-08-11-v2.zip`** (latest — same-day refresh). Highlights since
+> the morning build: **editor panes** — split the window into panes (right or down),
+> each with its own tab strip, drag tabs between panes, click anywhere to focus a
+> pane, resize panes on a visible gutter, every pane carries its own
+> breadcrumb + Render|Split|Editor|HEX toolbar for ITS tab, and pane layouts
+> persist per session (split, quit, reopen — it all comes back); ⌥⌘` cycles pane
+> focus. Plus: fast close/quit/session-switch can no longer lose your last
+> keystrokes (editor flush handshake), the markdown Split preview lives inside its
+> tab, and links are first-class everywhere — absolute file/folder paths open
+> in-app and `other.md#section` jumps to the heading.
+>
+> Older: `TextView-2026-08-11.zip` — same date, pre-panes. Highlights since 2026-08-05: the left
 > tool-window column rebuilt on one rule (uniform panels, resizes that take from the
 > neighbor then the flexible panel — never push chrome; visible gutter bars with grab
 > pills; drags glued to the pointer with self-healing stored heights), bottom tool
