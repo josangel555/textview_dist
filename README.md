@@ -2,15 +2,22 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-08-05.zip`** (latest). Highlights since 2026-07-31: panel/column
-> resizing glued to the pointer (the half-speed flicker/lag class is fixed everywhere),
-> predictable pointer cursors, false "file changed on disk" conflicts eliminated, huge
-> commit diffs bounded (no more wedged git panel), wikilinks + working relative links,
-> named session save points, Git Status Diff|Source toggle with ephemeral opens + visible
-> diff line washes/edge bars, Local History per-hunk "Merge into Current" + Copy Version,
-> per-file detected indentation (guides/Tab match the file), purple find matches with a
-> scrollbar match ruler + zoom-scaled find bar, restyled tabs (active connects to the
-> document), crash-guard "Restore Now", doubled recents, hex hot-exit.
+> **Use `TextView-2026-08-11.zip`** (latest). Highlights since 2026-08-05: the left
+> tool-window column rebuilt on one rule (uniform panels, resizes that take from the
+> neighbor then the flexible panel — never push chrome; visible gutter bars with grab
+> pills; drags glued to the pointer with self-healing stored heights), bottom tool
+> windows as TABS with one resizable band, the terminal demoted to a regular tool
+> window (dock it anywhere, ⌃` toggles, open panes migrate), dock placement remembered
+> app-globally, search results grouped honestly with folder hints + click lands on the
+> matched word, hex editor visible caret + hex↔ascii tandem selection, split preview
+> readable in dark themes, session-switch feedback (instant press + progress HUD),
+> concise value-only footer with relative-date toggle, accent-tinted active tab/rows,
+> centered traffic lights + title-band depth gradient.
+>
+> Older: `TextView-2026-08-05.zip` — pointer-glued panel resizing, predictable cursors,
+> false disk-conflicts eliminated, bounded commit diffs, wikilinks, named session save
+> points, Git Status Diff|Source toggle, Local History per-hunk merge, per-file detected
+> indentation, purple find matches + match ruler, crash-guard "Restore Now".
 >
 > Older: `TextView-2026-07-31.zip` — LaTeX math (backend MathML), footnotes/alerts/
 > definition lists, WebView git-diff viewer, split mode, tab/session drag, 3-way
