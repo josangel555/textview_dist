@@ -2,7 +2,14 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-08-11-v3.zip`** (latest — pane fixes over v2): the session
+> **Use `TextView-2026-08-12.zip`** (latest): the tab strip now lives INSIDE the
+> pane — always. The window-level tab bar is gone: tabs, the `+` button, and the
+> per-tab toolbar start at the pane's edge (right of the tool windows), exactly
+> like split panes; the header row above is purely sessions. Tab→session-pill
+> drag works from any pane's strip; tabs scroll to the selected chip. Includes
+> the v3 pane fixes below.
+>
+> Older: `TextView-2026-08-11-v3.zip` — pane fixes over v2: the session
 > tab strip stays visible while split (it was being composited over), the file
 > navigator/footer/watcher follow every pane interaction, and right-clicking any
 > tab offers **Split Pane Right / Left** (tear the tab into a new pane; drag a
