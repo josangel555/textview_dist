@@ -2,7 +2,15 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-08-12.zip`** (latest): the tab strip now lives INSIDE the
+> **Use `TextView-2026-08-12-v2.zip`** (latest — same-day refresh): panel
+> resizing overhauled for real — dividers track the mouse 1:1 all the way to
+> the actual limit (a feedback loop capped drags at HALF the available space),
+> panels never auto-shrink (a too-small shoulder scrolls instead), and the
+> file tree's private minimum is gone (one floor for every panel). Plus: the
+> Git panel no longer shows another session's repo, and the markdown Split
+> preview lives inside the tab under its own toolbar (no stray header/✕).
+>
+> Older: `TextView-2026-08-12.zip` — the tab strip now lives INSIDE the
 > pane — always. The window-level tab bar is gone: tabs, the `+` button, and the
 > per-tab toolbar start at the pane's edge (right of the tool windows), exactly
 > like split panes; the header row above is purely sessions. Tab→session-pill
