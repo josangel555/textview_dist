@@ -2,7 +2,22 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
-> **Use `TextView-2026-08-12-v2.zip`** (latest — same-day refresh): panel
+> **Use `TextView-2026-08-27.zip`** (latest): the panes-polish wave. The app
+> starts ~10× faster (5.6s → 0.5s). Splits are fully session-contained and
+> self-consistent: every close/move/cycle verb is pane-scoped (Close Other
+> Tabs, Close to the Right, Move Tab Left/Right, ⌃Tab), only the active
+> pane's tab wears the blue accent (the other pane's front goes grey),
+> opening files in one pane can't blank or steal from the other, and closing
+> a tab returns to the previously selected one (MRU). Also: the dead click
+> band above the tab text is gone (invisible titlebar overhang), stuck drag
+> "ghost chips" are impossible (liveness watchdog), the editor's horizontal
+> scrollbar no longer jumps while typing, markdown previews auto-refresh on
+> disk changes in every pane, markdown links are blue again, the CM6
+> pointer no longer flickers, and closed sessions are recoverable for 30
+> days via **Recently Closed ▸** (plus Save Session As… for named
+> checkpoints).
+>
+> Older: `TextView-2026-08-12-v2.zip` — same-day refresh: panel
 > resizing overhauled for real — dividers track the mouse 1:1 all the way to
 > the actual limit (a feedback loop capped drags at HALF the available space),
 > panels never auto-shrink (a too-small shoulder scrolls instead), and the
