@@ -2,6 +2,12 @@
 
 Pre-built **release (production)** builds of TextView (MarkdownViewer), one zip per date.
 
+**Source code:** the complete development history is published as a read-only archived
+snapshot at **<https://github.com/josangel555/textview_archive>** (MIT) — every commit,
+not maintained (no issues/PRs), but it builds into a runnable app with one command
+(`bash scripts/build-app.sh release`; see its README). Product page:
+<https://josangel.com/textview/>.
+
 > **Use `TextView-2026-08-27.zip`** (latest): the panes-polish wave. The app
 > starts ~10× faster (5.6s → 0.5s). Splits are fully session-contained and
 > self-consistent: every close/move/cycle verb is pane-scoped (Close Other
@@ -92,6 +98,10 @@ Verify a download: `shasum -c TextView-<date>.zip.sha256`
 3. On first run, re-grant any Privacy & Security permissions you need (Full Disk Access, Screen Recording) — TCC grants don't transfer between machines.
 
 ## Notes
+- **Want to build it yourself?** Clone the source archive —
+  <https://github.com/josangel555/textview_archive> — and run
+  `bash scripts/build-app.sh release` (macOS 15+, Xcode 16+/Swift 6, stable Rust).
+  No signing identity needed; the archive's README covers the Gatekeeper steps.
 - **arm64 only** — won't run on Intel Macs (that would need a universal/x86_64 build).
 - **Not notarized** (no Apple Developer ID yet), which is why the quarantine step is required.
 - These are binary artifacts; git history grows ~14 MB per dated zip. If this repo gets large, consider GitHub Releases or Git LFS instead of committing zips directly.
