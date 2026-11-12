@@ -8,7 +8,21 @@ not maintained (no issues/PRs), but it builds into a runnable app with one comma
 (`bash scripts/build-app.sh release`; see its README). Product page:
 <https://josangel.com/textview/>.
 
-> **Use `TextView-2026-08-27.zip`** (latest): the panes-polish wave. The app
+> **Use `TextView-2026-11-11.zip`** (latest). Highlights since 2026-08-27:
+> **unsaved edits now survive switching sessions and coming back** (a
+> background autosave could erase the edit of a tab that hadn't loaded yet —
+> fixed, for text and HEX edits); **markdown links can point at a line**
+> (`[x](/path/to/server.ts:1889)`, `:LINE:COL`, `#L42` open the file at that
+> line); **web pages can no longer load inside the app** (link clicks go to
+> your browser; drops/redirects are blocked and audit-logged);
+> **count lines of code** from the folder-stats card (committed-only,
+> CLOC-style, plus commit Activity); **crowded tabs show file names** with
+> dividers between tabs and a Settings → Appearance → Tab Icons option;
+> markdown opens Rendered again; Show Unsaved Changes on the dirty dot;
+> deleted files' Local History browsable without recreating; a crash in the
+> Claude Code (MCP) bridge fixed.
+>
+> Older: `TextView-2026-08-27.zip` — the panes-polish wave. The app
 > starts ~10× faster (5.6s → 0.5s). Splits are fully session-contained and
 > self-consistent: every close/move/cycle verb is pane-scoped (Close Other
 > Tabs, Close to the Right, Move Tab Left/Right, ⌃Tab), only the active
