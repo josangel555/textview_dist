@@ -8,7 +8,16 @@ not maintained (no issues/PRs), but it builds into a runnable app with one comma
 (`bash scripts/build-app.sh release`; see its README). Product page:
 <https://josangel.com/textview/>.
 
-> **Use `TextView-2026-11-11.zip`** (latest). Highlights since 2026-08-27:
+> **Use `TextView-2026-11-15.zip`** (latest) — the first build **signed with an
+> Apple Developer ID and notarized by Apple**: unzip, move it to Applications,
+> open it, and confirm macOS's one-time "downloaded from the Internet — Apple
+> checked it for malicious software" prompt. No quarantine commands, no System
+> Settings → "Open Anyway". Also new since 2026-11-11: **undo survives
+> switching sessions** — come back to a file and ⌘Z picks up where you left
+> off (kept for the app's lifetime, as long as the text is unchanged). Each
+> build now carries its own build number (this one: 3869).
+>
+> Older: `TextView-2026-11-11.zip` (self-signed). Highlights since 2026-08-27:
 > **unsaved edits now survive switching sessions and coming back** (a
 > background autosave could erase the edit of a tab that hadn't loaded yet —
 > fixed, for text and HEX edits); **markdown links can point at a line**
@@ -97,19 +106,30 @@ not maintained (no issues/PRs), but it builds into a runnable app with one comma
 
 | Artifact | Build | Arch | Signing |
 |---|---|---|---|
-| `TextView-<date>.zip` | **release / prod** | `arm64` (Apple Silicon) | self-signed `MarkdownViewer Local Dev`, hardened runtime |
+| `TextView-<date>.zip` from **2026-11-15** | **release / prod** | `arm64` (Apple Silicon) | **Developer ID Application, notarized by Apple, ticket stapled**, hardened runtime |
+| `TextView-<date>.zip` up to 2026-11-11 | release / prod | `arm64` | self-signed `MarkdownViewer Local Dev`, hardened runtime (not notarized) |
 
 Verify a download: `shasum -c TextView-<date>.zip.sha256`
 
 ## Install on another Mac (Apple Silicon)
 
-1. Unzip → `TextView.app`.
-2. It's self-signed (not notarized), so Gatekeeper blocks the first launch. Clear quarantine:
-   ```sh
-   xattr -dr com.apple.quarantine /path/to/TextView.app
-   ```
-   (or right-click the app in Finder → **Open**, once).
-3. On first run, re-grant any Privacy & Security permissions you need (Full Disk Access, Screen Recording) — TCC grants don't transfer between machines.
+1. Unzip → `TextView.app`, and move it to **Applications** (running it straight from
+   Downloads works, but macOS then runs it from a temporary read-only location).
+2. Open it. macOS asks once: *"TextView" is an app downloaded from the Internet. Are you
+   sure you want to open it? … Apple checked it for malicious software and none was
+   detected.* → **Open**. The approval is stapled to the app, so this works offline too.
+3. macOS asks for folder access (Documents, Desktop, Downloads) the first time TextView
+   reads there; grant whatever else you use (e.g. Full Disk Access) in System Settings →
+   Privacy & Security — permissions don't transfer between machines.
+
+Check a copy yourself: `spctl --assess --type execute -vv /Applications/TextView.app` →
+`accepted`, `source=Notarized Developer ID`.
+
+**Builds up to 2026-11-11 are self-signed** (not notarized), so macOS 15+ blocks their
+first launch; clear the quarantine flag once before opening:
+```sh
+xattr -dr com.apple.quarantine /path/to/TextView.app
+```
 
 ## Notes
 - **Want to build it yourself?** Clone the source archive —
@@ -117,5 +137,6 @@ Verify a download: `shasum -c TextView-<date>.zip.sha256`
   `bash scripts/build-app.sh release` (macOS 15+, Xcode 16+/Swift 6, stable Rust).
   No signing identity needed; the archive's README covers the Gatekeeper steps.
 - **arm64 only** — won't run on Intel Macs (that would need a universal/x86_64 build).
-- **Not notarized** (no Apple Developer ID yet), which is why the quarantine step is required.
+- **Notarized since 2026-11-15** (Developer ID + Apple's notary service). A build you make
+  yourself from the archive is unsigned/locally signed — fine on the Mac that built it.
 - These are binary artifacts; git history grows ~14 MB per dated zip. If this repo gets large, consider GitHub Releases or Git LFS instead of committing zips directly.
