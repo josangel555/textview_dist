@@ -8,7 +8,19 @@ not maintained (no issues/PRs), but it builds into a runnable app with one comma
 (`bash scripts/build-app.sh release`; see its README). Product page:
 <https://josangel.com/textview/>.
 
-> **Use `TextView-2026-11-15.zip`** (latest) — the first build **signed with an
+> **Use `TextView-2026-11-22.zip`** (latest; Developer ID-signed and notarized,
+> build 3874). New since 2026-11-15:
+> **images in markdown are found anywhere in the folder** — `![[photo.png]]`
+> (Obsidian-style) or `![](photo.png)` shows even when the image lives in a
+> subfolder; **plain web addresses are links** — a bare `https://…` in markdown
+> renders as a clickable link, and in the editor URLs are underlined and
+> **⌘-click** opens them in your browser; **the markdown preview keeps your
+> place** when the file changes on disk (it used to jump to the top); a text
+> tab that comes up blank after a tab switch now repairs itself, and an editor
+> whose background web process crashes reloads with your text instead of
+> staying empty.
+>
+> Older: `TextView-2026-11-15.zip` — the first build **signed with an
 > Apple Developer ID and notarized by Apple**: unzip, move it to Applications,
 > open it, and confirm macOS's one-time "downloaded from the Internet — Apple
 > checked it for malicious software" prompt. No quarantine commands, no System
